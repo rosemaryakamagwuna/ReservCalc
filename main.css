@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"); /*font import*/
+* {
+  margin: 0;
+  padding: o;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+#canvas {
+  width: 400px;
+  padding: 100px 20px;
+  border: 1px solid rgb(110, 107, 107);
+  border-radius: 4px;
+  margin-left: 40%;
+  margin-top: 100px;
+  display: block;
+  background-color: aliceblue;
+}
+
+.wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.wrapper .sidebar {
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  background: darkslategrey;
+  padding: 30px 0;
+}
+.wrapper .sidebar h1 {
+  color: darkslategrey;
+  padding: 15px 15px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: goldenrod;
+  display: block;
+}
+.wrapper .sidebar a {
+  color: darkslategrey;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(225, 225, 225, 0.05);
+  color: whitesmoke;
+  display: block;
+}
+.wrapper .sidebar a .fas {
+  width: 25px;
+}
+.wrapper .sidebar a:hover {
+  display: block;
+  margin-left: 20px;
+  transition: 0.4s;
+}

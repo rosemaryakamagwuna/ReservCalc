@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://kit.fontawesome.com/90ba37c436.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="vue-app">
+        <div id="canvas">
+            <button><input type="textbox"  id="parameter1"  /> Force</button>
+            <button><input type="textbox" id="parameter2"  /> Area</button>
+          <br> <br><label for="output">The pressure is: </label><input type="textbox" id="output"></input>
+          <br><br>
+          
+            <div class="calculator__keys">
+                <button v-on:click="divide">÷</button>
+                <button  v-on:click="add">+</button>
+                <button  v-on:click="subtract">-</button>
+                <button v-on:click="multiply">&times;</button>
+                <button v-on:click="decimal">.</button>
+                <input type="button" id="reset" value="reset" onclick="reset()"/>
+            </div>
+        </div>
+        
+         
+    </div>
+    <div class="wrapper">
+    
+        <div class="sidebar">
+            <h1>ReservCalc</h1>
+                <a href="#"><i class="fas fa-columns"></i>History Match</a>
+                <a href="#"><i class="fas fa-tasks"></i>Parameters</a>
+                <a href="#"><i class="fas fa-search"></i>Results</a>
+            <a href="https://www.linkedin.com/in/rosemary-akamagwuna/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/Rosemaryakams"><i class="fab fa-twitter"></i></a>
+            <a href="github.com/rosemaryakamagwuna"><i class="fab fa-github"></i></a>
+            
+        </div>
+    </div>
+   <script src="/index.js"></script> 
+</body>
+</html>
