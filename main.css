@@ -9,11 +9,12 @@
 }
 .canvas {
   width: 400px;
-  padding: 100px 20px;
+  padding: 80px 20px;
   border: 1px solid rgb(110, 107, 107);
   border-radius: 4px;
   margin-left: 40%;
   margin-top: 100px;
+  margin-bottom: 100px;
   display: block;
   background-color: aliceblue;
 }

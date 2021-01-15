@@ -1,44 +1,43 @@
 new Vue({
     el: "#vue-app",
     data: {
-        // force : document.getElementById("parameter1")[0].value,
-        // area : document.getElementById("parameter2")[0].value,
-        // pressure: parseFloat(parameter1) / parseFloat(parameter2),
-        // unknown1: parseFloat(parameter1) + parseFloat(parameter2),
-        // unknown2: parseFloat(parameter1) - parseFloat(parameter2),
-        // unknown3: parseFloat(parameter1) * parseFloat(parameter2),
-//this isnt raw js, you dont need all these above in vue.js, that is the whole essence of vue,
-//youll learn more on how vue talks to DOM element using refs, just have it in mind that vue is more about 
-//data orientation
+       
+        result: 0,
+        theta: 140,
+        ro2: 84640000,
+        h: 100,
+        k: 200,
+        porosity: 0.25,
+        cw: 0.000003,
+        cf: 0.000004,
+        swc: 0.05,
+        deltaP10: 1300,
+        viscosity: 0.55,
+        t0: 0,
+        linkedin: "//www.linkedin.com/in/rosemary-akamagwuna/"
         
-
-        force:0,
-        area:0,
-        pressure:0
-   
+     
     },
+
     methods: {
-        //you can declare a function like this
-        divide:function(){           
-            this.pressure = this.force/this.area
-            // alert(this.pressure);
+        constantf: function () {
+            this.result = this.theta / 360;
         },
-        //or like this, like this is neater
-        add() {
-            this.pressure = this.force + this.area;     
+        compressibility: function () {
+            this.result = this.cw + this.cf;
         },
-        subtract() {
-            this.pressure = this.force - this.area;               
+        acquiferconstant: function () {
+            this.result = 1.119 * this.porosity * 0.38889 * this.h * 0.000007 * this.ro2;
         },
-        
-        multiply() {
-            this.pressure = this.force * this.area;                          
+        teedee: function () {
+            
+            this.result = (2.309 * this.k) / (this.porosity * this.viscosity * 0.000007 * this.ro2);
         },
-    
-        reset() {
-            this.pressure=0;
-            this.force=0;
-            this.area=0;          
-        }
+        reset: function () {
+            this.result = 0;
+        },
+          
     }
-    });
+
+    
+})
