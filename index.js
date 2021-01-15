@@ -1,35 +1,44 @@
 new Vue({
     el: "#vue-app",
     data: {
-        force : document.getElementById("parameter1")[0].value,
-        area : document.getElementById("parameter2")[0].value,
+        // force : document.getElementById("parameter1")[0].value,
+        // area : document.getElementById("parameter2")[0].value,
+        // pressure: parseFloat(parameter1) / parseFloat(parameter2),
+        // unknown1: parseFloat(parameter1) + parseFloat(parameter2),
+        // unknown2: parseFloat(parameter1) - parseFloat(parameter2),
+        // unknown3: parseFloat(parameter1) * parseFloat(parameter2),
+//this isnt raw js, you dont need all these above in vue.js, that is the whole essence of vue,
+//youll learn more on how vue talks to DOM element using refs, just have it in mind that vue is more about 
+//data orientation
+        
 
-        pressure: parseFloat(parameter1) / parseFloat(parameter2),
-        unknown1: parseFloat(parameter1) + parseFloat(parameter2),
-        unknown2: parseFloat(parameter1) - parseFloat(parameter2),
-        unknown3: parseFloat(parameter1) * parseFloat(parameter2)
-    
+        force:0,
+        area:0,
+        pressure:0
    
     },
     methods: {
-        divide: function () {
-            document.getElementsById("output")[0].value = pressure;
+        //you can declare a function like this
+        divide:function(){           
+            this.pressure = this.force/this.area
+            // alert(this.pressure);
         },
-        add: function () {
-            document.getElementsById("output")[0].value = unknown1;
-               
+        //or like this, like this is neater
+        add() {
+            this.pressure = this.force + this.area;     
         },
-        subtract: function () {
-            document.getElementsById("output")[0].value = unknown2;
+        subtract() {
+            this.pressure = this.force - this.area;               
         },
         
-        multiply: function () {
-            document.getElementsById("output")[0].value = unknown3;
+        multiply() {
+            this.pressure = this.force * this.area;                          
         },
     
-        reset: function () {
-            ctx.clearRect(0, 0, canvasLength, canvasLength);
-            setUp();
+        reset() {
+            this.pressure=0;
+            this.force=0;
+            this.area=0;          
         }
     }
     });

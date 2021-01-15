@@ -7,7 +7,7 @@
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
 }
-#canvas {
+.canvas {
   width: 400px;
   padding: 100px 20px;
   border: 1px solid rgb(110, 107, 107);
